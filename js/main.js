@@ -79,18 +79,18 @@ function addClickHandlers(contentSelection) {
 $('.vehicle-option').on('click', function() {
 carSelection.vehicle.choice = $(this).data('option');
 carSelection.vehicle.price = $(this).data('price');
-$('.cost-display').html(carSelection.package.price+carSelection.vehicle.price+carSelection.color.price);
+$('.cost-display').html('$' + (carSelection.package.price+carSelection.vehicle.price+carSelection.color.price));
 $('.vehicle-display').attr("src", "assets/" + carSelection.vehicle.choice +".jpg");
 });
 $('.color-option').on('click', function() {
 carSelection.color.choice = $(this).data('option');
 carSelection.color.price = $(this).data('price');
-$('.cost-display').html(carSelection.package.price+carSelection.vehicle.price+carSelection.color.price);
+$('.cost-display').html('$' + (carSelection.package.price+carSelection.vehicle.price+carSelection.color.price));
 $('.vehicle-display').attr("src", "assets/" + carSelection.vehicle.choice + "-"+carSelection.color.choice+".jpg");
 });
 $('.package-option').on('click', function() {
 carSelection.package.choice = $(this).data('option');
 carSelection.package.price = $(this).data('price');
-$('.cost-display').html(carSelection.package.price+carSelection.vehicle.price+carSelection.color.price);
+$('.cost-display').html('$' + (carSelection.package.price+carSelection.vehicle.price+carSelection.color.price));
 });
 }
